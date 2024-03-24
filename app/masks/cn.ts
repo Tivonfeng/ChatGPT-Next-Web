@@ -4,6 +4,7 @@ export const CN_MASKS: BuiltinMask[] = [
 	{
 		avatar: "1f638",
 		name: "OJ智能调试员",
+		hideContext: true,
 		context: [
 		  {
 			id: "oj-0",
