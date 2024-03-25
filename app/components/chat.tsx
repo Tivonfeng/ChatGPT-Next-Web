@@ -177,7 +177,7 @@ function PromptToast(props: {
 
   return (
     <div className={styles["prompt-toast"]} key="prompt-toast">
-      {props.showToast && (
+      {/* {props.showToast && (
         <div
           className={styles["prompt-toast-inner"] + " clickable"}
           role="button"
@@ -188,7 +188,7 @@ function PromptToast(props: {
             {Locale.Context.Toast(context.length)}
           </span>
         </div>
-      )}
+      )} */}
       {props.showModal && (
         <SessionConfigModel onClose={() => props.setShowModal(false)} />
       )}
@@ -473,7 +473,7 @@ export function ChatActions(props: {
       );
       showToast(nextModel);
     }
-  }, [chatStore, currentModel, models]);
+  }, [chatStore, currentModel, models, props]);
 
   return (
     <div className={styles["chat-input-actions"]}>
@@ -491,13 +491,13 @@ export function ChatActions(props: {
           icon={<BottomIcon />}
         />
       )}
-      {props.hitBottom && (
+      {/* {props.hitBottom && (
         <ChatAction
           onClick={props.showPromptModal}
           text={Locale.Chat.InputActions.Settings}
           icon={<SettingsIcon />}
         />
-      )}
+      )} */}
 
       {showUploadImage && (
         <ChatAction
@@ -522,11 +522,11 @@ export function ChatActions(props: {
         }
       />
 
-      <ChatAction
+      {/* <ChatAction
         onClick={props.showPromptHints}
         text={Locale.Chat.InputActions.Prompt}
         icon={<PromptIcon />}
-      />
+      /> */}
 
       <ChatAction
         onClick={() => {
