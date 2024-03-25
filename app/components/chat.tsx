@@ -177,7 +177,7 @@ function PromptToast(props: {
 
   return (
     <div className={styles["prompt-toast"]} key="prompt-toast">
-      {props.showToast && (
+      {/* {props.showToast && (
         <div
           className={styles["prompt-toast-inner"] + " clickable"}
           role="button"
@@ -188,7 +188,7 @@ function PromptToast(props: {
             {Locale.Context.Toast(context.length)}
           </span>
         </div>
-      )}
+      )} */}
       {props.showModal && (
         <SessionConfigModel onClose={() => props.setShowModal(false)} />
       )}
